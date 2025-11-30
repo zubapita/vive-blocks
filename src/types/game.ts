@@ -53,4 +53,3 @@ export interface GameState {
   isGameOver: boolean;
   isPaused: boolean;
 }
-

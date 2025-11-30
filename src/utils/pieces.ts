@@ -105,4 +105,3 @@ export function createRandomTetromino(position: Position): Tetromino {
 export function getTetrominoShape(type: TetrominoType): boolean[][] {
   return TETROMINO_SHAPES[type].map(row => [...row]);
 }
-
