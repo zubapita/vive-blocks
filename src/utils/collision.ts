@@ -25,13 +25,13 @@ export function isValidPosition(
         const gridX = position.x + col;
         const gridY = position.y + row;
 
-        // 盤面外チェック（yが負の値は許可、上部から開始するため）
-        if (gridX < 0 || gridX >= GRID_COLS || gridY >= GRID_ROWS) {
+        // 盤面外チェック
+        if (gridX < 0 || gridX >= GRID_COLS || gridY < 0 || gridY >= GRID_ROWS) {
           return false;
         }
 
-        // 既存のブロックとの衝突チェック（yが負の値の場合はチェックしない）
-        if (gridY >= 0 && grid[gridY][gridX] !== 0) {
+        // 既存のブロックとの衝突チェック
+        if (grid[gridY][gridX] !== 0) {
           return false;
         }
       }

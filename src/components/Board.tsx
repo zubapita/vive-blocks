@@ -23,6 +23,8 @@ export function Board() {
       const relativeCol = colIndex - position.x;
 
       // 盤面内のセルのみチェック（yが負の値でも表示可能）
+      // relativeRowが負の値の場合は、shape配列の範囲外なので表示しない
+      // relativeRowが4以上の場合も範囲外なので表示しない
       if (
         rowIndex >= 0 &&
         rowIndex < 20 &&
@@ -30,7 +32,7 @@ export function Board() {
         relativeRow < 4 &&
         relativeCol >= 0 &&
         relativeCol < 4 &&
-        shape[relativeRow][relativeCol]
+        shape[relativeRow]?.[relativeCol] === true
       ) {
         return type as CellType;
       }

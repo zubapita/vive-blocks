@@ -37,7 +37,7 @@ function createEmptyGrid(): Grid {
  * 初期位置を計算する（盤面の上部中央）
  */
 function getInitialPosition(): Position {
-  return { x: 3, y: -1 }; // 10列の中央付近（4列目から開始）、y=-1で上部から開始
+  return { x: 3, y: 0 }; // 10列の中央付近（4列目から開始）、y=0で上部から開始
 }
 
 /**
