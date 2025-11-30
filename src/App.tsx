@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">
-        TETRIS (Vibe Coding)
+        Vive Blocks
       </h1>
       {isGameOver && (
         <div className="mb-4 text-red-500 text-xl font-bold">GAME OVER</div>
