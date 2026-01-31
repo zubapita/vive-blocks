@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Board } from './components/Board';
+import { MobileController } from './components/MobileController';
 import { useGameStore } from './store/gameStore';
 import { useGameLoop } from './hooks/useGameLoop';
 
@@ -53,15 +54,16 @@ function App() {
   }, [start]);
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-2 sm:p-4">
+      <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center">
         Vive Blocks
       </h1>
       {isGameOver && (
         <div className="mb-4 text-red-500 text-xl font-bold">GAME OVER</div>
       )}
       <Board />
-      <div className="mt-4 text-sm text-gray-400 text-center">
+      <MobileController />
+      <div className="mt-4 text-sm text-gray-400 text-center hidden sm:block">
         <p>← →: 移動 | ↑: 回転 | ↓ または Space: 落下</p>
       </div>
     </div>
