@@ -13,7 +13,7 @@ export function Cell({ type }: CellProps) {
 
   return (
     <div
-      className={`${colorClass} border border-gray-700 w-8 h-8 min-w-[32px] min-h-[32px]`}
+      className={`${colorClass} border border-gray-700 w-6 h-6 sm:w-8 sm:h-8`}
     />
   );
 }
